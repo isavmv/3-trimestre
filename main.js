@@ -6,15 +6,26 @@ const textoResultado = document.querySelector("texto-resultado")
 
 const Perguntas = [
     {
-         enunciado: "insira o ennciado da pergunta 1",
-         alternativas: ["Alternativa 1", "alternativa 2"],
+         enunciado: "Probabilidade de ganhar no jogo do bicho",
+         alternativas: ["50%", "100%"],
     },
     {
-        enunciado: "Insira o enunciado da pergunta2",
-        alternativas:["alternativa1","alternativa2"],
+        enunciado: "Pular de um precipcio e cair em cima de um cavalo marinho",
+        alternativas:["90%","100%"],
     },
     {
-        enunciado:"insira o enunciado da pergunta3",
-        alternativas: ["alternativa1","alternativa2"],
+        enunciado:"Ganhar de um canguru em uma luta de box",
+        alternativas: ["0%","10%"],
     }
 ];
+let atual = 0;
+let perguntaAtual;
+function mostraPerguntas(){
+    perguntaAtual = perguntas[atual];
+}
+const caixadePergunta = document.querySelector(".caixa-perguntas");
+function mostraPerguntas(){
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado
+}
+
