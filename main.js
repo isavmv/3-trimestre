@@ -20,12 +20,19 @@ const Perguntas = [
 ];
 let atual = 0;
 let perguntaAtual;
+
 function mostraPerguntas(){
     perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
 }
-const caixadePergunta = document.querySelector(".caixa-perguntas");
-function mostraPerguntas(){
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado
+function mostraAlternativas(){
+    for (const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("button")
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
 }
 
+
+mostraPergunta();
